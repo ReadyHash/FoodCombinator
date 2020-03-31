@@ -1,25 +1,35 @@
-div {
+main {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+
 	background-color: yellow;
 	max-width: 100%;
+}
+div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 #title {
 	font-family: Helvetica;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	color: white;
 
 	padding: 0px;
-	height: 10rem;
+	height: 12rem;
 	max-width: 100%;
 	background-color: black;
 	z-index: 10;
-	display: ;
+	display: block;
+	text-align: center;
 }
 
 html,body {
 	margin: 0px;
+}
+#game-wrap {
+	display: block;
 }
 
 .game-1 {
@@ -28,7 +38,7 @@ html,body {
 	position: relative;
 }
 
-button {
+img {
 	width: 100px;
 	height: 100px;
 }
@@ -36,4 +46,16 @@ button {
 .game {
 
 	padding: 0px 0px 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+.sauce {
+	display: none;
+}
+
+.meat {
+	display: none;
 }

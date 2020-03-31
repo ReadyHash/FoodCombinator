@@ -5,33 +5,59 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+        <div id = "title" class="dfkahfgsg majfgljagfj ajfafjd">
+            <h1>FOOD COMBINATOR</h1>
+            <h2 id="plate">Please select the ingredients below to create a dish</h2>
+        </div>
     <main>
-        <div id = "title">
-            <h1>FOOD <br> COMBINATOR</h1>
+        <div id="game-wrap">
+            <div id="game-base">
+                <button class="game">
+                    <img id= "rice" src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/parboiled-rice-1296x728-feature.jpg?w=1155&h=1528">
+                </button>
+
+                <button class="game">
+                    <img id = "pasta" src="https://ak8.picdn.net/shutterstock/videos/29955838/thumb/1.jpg">
+                </button>
+
+                <button class="game">
+                    <img id = "noodle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSa-gI336tf0nIyLmh6d19TjgthODqnt6y9I64OTlLa0z-AhoDp&usqp=CAU">
+                </button>
+            </div>
+            <div id="game-sauce">
+                <button class = "game sauce" >
+                    <img id = "tomato" src="https://www.seriouseats.com/recipes/images/2014/09/20140919-easy-italian-american-red-sauce-vicky-wasik-19-1500x1125.jpg">
+                </button>
+                <button class = "game sauce" >
+                    <img id = "cream" src="https://assets.myfoodandfamily.com/adaptivemedia/rendition/206267_2100x1400.jpg?id=1230418b2a85a6af7b93502608bc75204c458690&ht=650&wd=1004&clid=pim">
+                </button>
+                <button class = "game sauce" >
+                    <img id = "garlic" src="https://www.kitchenkonfidence.com/wp-content/uploads/2013/10/Roasted-Garlic-Oil-e1431543574996.jpg">
+                </button>
+            </div>
+            <div id = "game-meat">
+                <button class="game meat">
+                    <img id = "chicken" src="https://electrastreet.net/wp-content/uploads/2019/02/electra-street-raw-chicken.png">
+                </button>
+                <button class="game meat">
+                    <img id = "bacon" src="https://www.simplyrecipes.com/wp-content/uploads/2019/08/baked-bacon-Lead-1.jpg">
+                </button>
+                <button class="game meat">
+                    <img id = "seafood" src="https://healthiack.com/wp-content/uploads/2013/07/fish.jpg">
+                </button>
+            </div>
         </div>
-        <div id="game-1">
-            <button id = "rice" value="rice" class="game" style='background: url("https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/parboiled-rice-1296x728-feature.jpg?w=1155&h=1528");'>
-<!--                 <img id= "rice" src=""> -->
-            </button>
 
-            <button value="pasta" class="game">
-                <img src="https://ak8.picdn.net/shutterstock/videos/29955838/thumb/1.jpg">
-            </button>
 
-            <button value="noodle" class="game">
-                <img src="https://lh3.googleusercontent.com/proxy/fdyGIERvIfMPMOrotXp2LJ9bPzwIkebzrTXcC8xvDohxdm9uW3JLTguUdf47-6sdiXB8ylBXt_qLkIVEYiNHsBElt_d1SSx_l-lVy4Xx9iK-ME4sDA9GLY_tBBWswbOlvruHgk0">
-            </button>
+        <div id = "output">
+            <a id="create-button"> <h2 >CREATE DISH</h2></a>
         </div>
-
-
-        <div>
-            <a id="play-button"> <h2 >PLAY</h2></a>
-        </div>
-        <div>
+        <div id = "picture-output"></div>
+<!--         <div>
             <h1>Type Ingredient here </h1>
         </div>
         <div>
-            <input id="ingredient-selector" type="text" placeholder="eg.pasta">
+            <input id="ingredient-selector" type="text" placeholder="eg.pasta"> -->
         </div>
     </main>
 <script src="script.js"></script>
