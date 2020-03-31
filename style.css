@@ -1,0 +1,39 @@
+div {
+	display: flex;
+	justify-content: center;
+	background-color: yellow;
+	max-width: 100%;
+}
+
+#title {
+	font-family: Helvetica;
+	font-size: 1rem;
+	color: white;
+
+	padding: 0px;
+	height: 10rem;
+	max-width: 100%;
+	background-color: black;
+	z-index: 10;
+	display: ;
+}
+
+html,body {
+	margin: 0px;
+}
+
+.game-1 {
+	max-width: 100%;
+	background-color: green;
+	position: relative;
+}
+
+button {
+	width: 100px;
+	height: 100px;
+}
+
+.game {
+
+	padding: 0px 0px 0px;
+}

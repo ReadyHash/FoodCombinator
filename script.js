@@ -33,23 +33,14 @@ var recipe = ["spicynoodle", "carbonara"];
 
 var baseIngredients = ["rice", "pasta", "noodle"];
 var sauceIngredients = ["tomato", "cream", "chili"];
+var meatIngredients = ["fish","chicken","shrimp"];
+var topIngredients = ["cheese","shallots","spring onion"]
 
 
 var i;
 
 // listener to activate when ingredient is typed
 var ingrtTyped = document.querySelector("#ingredient-selector").addEventListener("change",function(event){
-
-
-        // var setPlate = function(ingrtTyped){
-        //     console.log("plate is being set...");
-
-        //     // checks for the first step
-
-        //     console.log("Checking the food on the plate...");
-        // }
-
-
 
         //defines the text given by user as an ingredient
         var ingredient = event.target.value;
@@ -83,14 +74,14 @@ return this;
 
 })
 // checks if typed ingredient exists in the base array
-var checkBase = function(ingrtTyped){
+var checkBase = function(event){
 
     // loop to check for baseIngredients
     for(i = 0; i < baseIngredients.length; i++){
         console.log(baseIngredients[i]);
         console.log("checking ingredients...");
 
-        if(baseIngredients[i] === ingrtTyped){
+        if(baseIngredients[i] === event){
         console.log(baseIngredients[i]);
         console.log("ingredient is true");
         return true;
@@ -99,14 +90,14 @@ var checkBase = function(ingrtTyped){
     return false;
 }
 
-var checkSauce = function(ingrtTyped){
+var checkSauce = function(event){
 
     // loop to check for baseIngredients
     for(i = 0; i < sauceIngredients.length; i++){
         console.log(sauceIngredients[i]);
         console.log("checking ingredients...");
 
-        if(sauceIngredients[i] === ingrtTyped){
+        if(sauceIngredients[i] === event){
         console.log(sauceIngredients[i]);
         console.log("ingredient is true");
         return true;
@@ -115,24 +106,25 @@ var checkSauce = function(ingrtTyped){
     return false;
 }
 
-//functions that runs on each set
-// this function runs on the first step
-var setBase = function(ingrtTyped){
+// function to set the ingredients on the plate
+// step 1
+// setting the base, rice noodle...
+var setBase = function(event){
     console.log("base is being set...");
     //update steps to +1
     stepincrement = 1;
     stepsTaken = stepsTaken + stepincrement;
     console.log("step increased");
-
-    //update plate with ingredient to ingrtTyped
-    currentPlate.push(ingrtTyped);
+    //update plate with ingredient to event
+    currentPlate.push(event.target.value);
         console.log("---------------------------------")
         console.log("plate contains : " + currentPlate);
         console.log("steps taken so far : " + stepsTaken);
 }
 
-// this function runs on the second step
-var setSauce = function(ingrtTyped){
+// step 2
+// setting the sauces
+var setSauce = function(event){
     console.log("sauce is being set...");
 
     //update steps to +1
@@ -141,8 +133,61 @@ var setSauce = function(ingrtTyped){
     console.log("step increased");
 
     // add sauce into the array
-    currentPlate.push(ingrtTyped);
+    currentPlate.push(event);
         console.log("---------------------------------")
         console.log("plate contains :" + currentPlate);
         console.log("steps taken so far : " + stepsTaken);
 }
+// step 3
+// choosing a meat
+// var setMeat = function(event){
+//     console.log("Meat is being set...");
+
+//     //update steps to +1
+//     stepincrement = 1;
+//     stepsTaken = stepsTaken + stepincrement;
+//     console.log("step increased");
+
+//     // add meat into the array
+//     currentPlate.push(event);
+//         console.log("---------------------------------")
+//         console.log("plate contains :" + currentPlate);
+//         console.log("steps taken so far : " + stepsTaken);
+// }
+// // step 4
+// // choose a topping
+// var setTopping = function(event){
+//     console.log("Topping is being set...");
+
+//     //update steps to +1
+//     stepincrement = 1;
+//     stepsTaken = stepsTaken + stepincrement;
+//     console.log("step increased");
+
+//     // add topping into the array
+//     currentPlate.push(event);
+//         console.log("---------------------------------");
+//         console.log("plate contains :" + currentPlate);
+//         console.log("steps taken so far : " + stepsTaken);
+// }
+
+var startGame  = function(event){
+    console.log("Game is starting...");
+    document.getElementById("title").innerText = " ";
+}
+
+var playButton = document.querySelector("#play-button").addEventListener("click", startGame );
+
+var titleScreen = document.getElementById("title");
+
+var Button = document.querySelectorAll(".game");
+
+    rice = Button[0];
+    rice.addEventListener("click", setBase);
+    console.log("Rice is listening...");
+
+    Button[1].addEventListener("click", setBase);
+    console.log("Pasta is listening...");
+
+    Button[2].addEventListener("click", setBase);
+    console.log("noodle is listening...");
